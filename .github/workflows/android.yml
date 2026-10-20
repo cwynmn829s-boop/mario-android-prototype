@@ -24,10 +24,11 @@ jobs:
         with:
           name: starbound-runner-debug-apk
           path: app/build/outputs/apk/debug/app-debug.apk
-      - name: Publish latest APK release
+      - name: Publish v0.1.0 APK release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: latest-debug
-          name: Latest debug APK
+          tag_name: v0.1.0
+          name: Starbound Runner v0.1.0
           prerelease: true
+          make_latest: true
           files: app/build/outputs/apk/debug/app-debug.apk
